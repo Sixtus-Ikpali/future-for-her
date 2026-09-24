@@ -254,7 +254,31 @@ const payload = {
   </label>
 
   {/* Number of girls */}
-  type="number"
+  <label>
+  <span className="mb-2 block text-sm font-semibold text-[#4c454e]">
+    Number of Girls
+  </span>
+
+  <select
+    name="numberOfGirls"
+    required
+    value={numberOfGirls}
+    onChange={(event) => setNumberOfGirls(Number(event.target.value))}
+    className="min-h-12 w-full rounded-xl border border-[#ded4dc] bg-white px-4 outline-none transition focus:border-[#ec7929] focus:ring-2 focus:ring-[#ec7929]/10"
+  >
+    {Array.from({ length: 10 }, (_, index) => index + 1).map(
+      (number) => (
+        <option key={number} value={number}>
+          {number}
+        </option>
+      )
+    )}
+  </select>
+
+  <span className="mt-2 block text-xs text-[#8a828c]">
+    You can register a maximum of 10 girls.
+  </span>
+</label>
 
   {/* Girl names */}
   <div>
