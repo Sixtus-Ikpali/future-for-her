@@ -254,32 +254,7 @@ const payload = {
   </label>
 
   {/* Number of girls */}
-  <label>
-    <span className="mb-2 block text-sm font-semibold text-[#4c454e]">
-      Number of Girls
-    </span>
-
-    <input
-      type="number"
-      name="numberOfGirls"
-      required
-      min={1}
-      max={10}
-      value={numberOfGirls}
-      onChange={(event) => {
-        const value = Number(event.target.value);
-
-        if (value >= 1 && value <= 10) {
-          setNumberOfGirls(value);
-        }
-      }}
-      className="min-h-12 w-full rounded-xl border border-[#ded4dc] bg-white px-4 outline-none transition focus:border-[#ec7929] focus:ring-2 focus:ring-[#ec7929]/10"
-    />
-
-    <span className="mt-2 block text-xs text-[#8a828c]">
-      You can register a maximum of 10 girls.
-    </span>
-  </label>
+  type="number"
 
   {/* Girl names */}
   <div>
