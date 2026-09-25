@@ -700,7 +700,7 @@ export default function Home() {
           </button>
 
           <p className="text-xs leading-5 text-[#8a828c]">
-            The contact form will be activated before launch.
+            
           </p>
         </form>
       </div>
