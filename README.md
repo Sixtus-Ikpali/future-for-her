@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Read-only admin registrations
+
+Set these server-side environment variables in `.env.local` and in the deployment environment:
+
+```text
+ADMIN_PASSWORD=<a unique password of at least 12 characters>
+ADMIN_SESSION_SECRET=<a random secret of at least 32 characters>
+```
+
+The existing `NEXT_PUBLIC_SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` are also required. Keep the service-role key and both admin secrets server-side. The admin login is at `/admin/login`; signed sessions expire after 12 hours. `/admin/registrations` shows only `letter-to-a-girl-child-2026` registrations and is read-only.
+
 ## Getting Started
 
 First, run the development server:
